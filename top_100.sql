@@ -35,3 +35,7 @@ SELECT COUNT(reparto) AS HarrisonFord FROM reparto WHERE reparto = 'Harrison For
 SELECT pelicula, agnoEstreno FROM peliculas WHERE agnoEstreno BETWEEN 1990 AND 1999 ORDER BY pelicula ASC;
 
 --Hacer una consulta SQL que muestre los títulos con su longitud, la longitud debe ser nombrado para la consulta como “longitud_titulo”.
+SELECT pelicula, LENGTH(pelicula) AS  longitud_titulo FROM peliculas;
+
+--Consultar cual es la longitud más grande entre todos los títulos de las películas.
+SELECT LENGTH(pelicula) AS longitud_titulo FROM peliculas ORDER BY LENGTH(pelicula) DESC LIMIT 1;
